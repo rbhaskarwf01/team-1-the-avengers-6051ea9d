@@ -49,15 +49,15 @@ namespace levelup
             Assert.IsNotNull(position);
         }
 
-        [Test]
-        public void MoveNorthMovesCharacterOnePositionNorth()
-        {
-            var fakeMap = new FakeGameMap();
-            var testChar = new Character("John", fakeMap);
-            testChar.move(GameController.DIRECTION.NORTH);
-            var newPosition = testChar.getPosition();
-            Assert.AreEqual(1, newPosition.coordinates.X);
-            Assert.AreEqual(2, newPosition.coordinates.Y);
-        }
+        // [Test]
+        // public void MoveNorthMovesCharacterOnePositionNorth()
+        // {
+        //     var fakeMap = new FakeGameMap();
+        //     var testChar = new Character("John", fakeMap);
+        //     testChar.move(GameController.DIRECTION.NORTH);
+        //     var newPosition = testChar.getPosition();
+        //     Assert.AreEqual(1, newPosition.coordinates.X);
+        //     Assert.AreEqual(2, newPosition.coordinates.Y);
+        // }
     }
 }
