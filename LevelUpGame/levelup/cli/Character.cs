@@ -10,15 +10,18 @@ public class Character{
 
     public Character(){
         Name = DEFAULT_NAME;
+        position = new Position(0,0);
     }
 
     public Character(string name){
         Name = name;
+        position = new Position(0,0);
         gameMap = new GameMap();
     }
 
     public Character(string name, GameMap map){
         Name = name;
+        position = new Position(0,0);
         gameMap = map;
     }
 

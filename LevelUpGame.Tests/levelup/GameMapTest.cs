@@ -29,14 +29,14 @@ namespace levelup
             Assert.IsNotNull(Totposition);
             Assert.AreEqual(100,Totposition);
         }
-        // [Test]
-        // public void GetCalculatePositionsMovingNorthSuccessfully() {
-        //     var testObj = new GameMap();
-        //     var startPosition = new Position(0,0);
-        //     var calcposition = testObj.calculatePosition(startPosition,GameController.DIRECTION.NORTH); 
-        //     Assert.AreEqual(0, calcposition.coordinates.X);
-        //     Assert.AreEqual(0, calcposition.coordinates.Y);
-        // }
+        [Test]
+        public void GetCalculatePositionsMovingNorthSuccessfully() {
+            var testObj = new GameMap();
+            var startPosition = new Position(0,0);
+            var calcposition = testObj.calculatePosition(startPosition,GameController.DIRECTION.NORTH); 
+            Assert.AreEqual(0, calcposition.coordinates.X);
+            Assert.AreEqual(1, calcposition.coordinates.Y);
+        }
         [Test]
         public void isPositionValidReturnsTrueWithValidPoint() {
             var testObj = new GameMap();
