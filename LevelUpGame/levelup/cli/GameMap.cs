@@ -24,6 +24,15 @@ public class GameMap{
             case GameController.DIRECTION.NORTH:
                 newpoint = new Point(position.coordinates.X,position.coordinates.Y +1);
                 break;
+            case GameController.DIRECTION.SOUTH:
+                newpoint = new Point(position.coordinates.X,position.coordinates.Y -1);
+                break;
+            case GameController.DIRECTION.EAST:
+                newpoint = new Point(position.coordinates.X +1,position.coordinates.Y);
+                break;
+            case GameController.DIRECTION.WEST:
+                newpoint = new Point(position.coordinates.X -1,position.coordinates.Y);
+                break;
         }
 
         if (isPositionValid(newpoint))

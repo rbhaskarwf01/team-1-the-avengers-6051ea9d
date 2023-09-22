@@ -44,5 +44,29 @@ namespace levelup
             var isPositionValid = testObj.isPositionValid(startPoint);
             Assert.True(isPositionValid);
         }
+        [Test]
+        public void GetCalculatePositionsMovingSouthNegative() {
+            var testObj = new GameMap();
+            var startPosition = new Position(0,0);
+            var calcposition = testObj.calculatePosition(startPosition,GameController.DIRECTION.SOUTH); 
+            Assert.AreEqual(0, calcposition.coordinates.X);
+            Assert.AreEqual(0, calcposition.coordinates.Y);
+        }
+        [Test]
+        public void GetCalculatePositionsMovingEastSuccessfully() {
+            var testObj = new GameMap();
+            var startPosition = new Position(9,9);
+            var calcposition = testObj.calculatePosition(startPosition,GameController.DIRECTION.EAST); 
+            Assert.AreEqual(9, calcposition.coordinates.X);
+            Assert.AreEqual(9, calcposition.coordinates.Y);
+        }
+        [Test]
+        public void GetCalculatePositionsMovingWestNegative() {
+            var testObj = new GameMap();
+            var startPosition = new Position(0,9);
+            var calcposition = testObj.calculatePosition(startPosition,GameController.DIRECTION.WEST); 
+            Assert.AreEqual(0, calcposition.coordinates.X);
+            Assert.AreEqual(9, calcposition.coordinates.Y);
+        }
     }
 }

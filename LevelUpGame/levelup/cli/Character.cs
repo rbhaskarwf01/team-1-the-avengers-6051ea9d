@@ -1,6 +1,7 @@
 using Sharprompt;
 using levelup;
 
+namespace levelup{
 public class Character{
     public static String DEFAULT_NAME = "Charlie";
     public string Name;
@@ -40,4 +41,5 @@ public class Character{
     public void move(GameController.DIRECTION direction){
         position = gameMap.calculatePosition(position, direction);
     }
+}
 }
