@@ -32,7 +32,7 @@ namespace levelup
         }
 
         // Pre-implemented to demonstrate ATDD
-        // TODO: Update this if it does not match your design
+        // DONE: Update this if it does not match your design
         public void CreateCharacter(String name)
         {
             if (name != null && !name.Equals(""))
@@ -49,8 +49,12 @@ namespace levelup
 
         public void StartGame()
         {
-            // TODO: Implement startGame - Should probably create positions and put the character on one
-            // TODO: Should also update the game status?
+            // DONE: Implement startGame - Should probably create positions and put the character on one
+            // DONE: Should also update the game status?
+            GameMap map = new GameMap();
+            character.enterMap(map);
+            status.currentPosition = character.getPosition().coordinates;
+            status.moveCount = 0;
         }
 
         public GameStatus GetStatus()
@@ -62,6 +66,9 @@ namespace levelup
         {
             //TODO: Implement move - should call something on another class
             //TODO: Should probably also update the game status
+            character.move(directionToMove);
+            status.currentPosition = character.getPosition().coordinates;
+            status.moveCount++;
         }
 
         public void SetCharacterPosition(Point coordinates)

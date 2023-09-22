@@ -34,5 +34,17 @@ namespace levelup
             var status = testObj.GetStatus();
             Assert.AreEqual("Charlie", status.characterName);
         }
+
+        [Test]
+        public void StartGameInitializesGameStatusCorrectly(){
+            testObj.CreateCharacter("Susie");
+            testObj.StartGame();
+            var status = testObj.GetStatus();
+            Assert.AreEqual("Susie", status.characterName);
+            Assert.AreEqual(0, status.currentPosition.X);
+            Assert.AreEqual(0, status.currentPosition.Y);
+            Assert.AreEqual(0, status.moveCount);
+            
+        }
     }
 }
