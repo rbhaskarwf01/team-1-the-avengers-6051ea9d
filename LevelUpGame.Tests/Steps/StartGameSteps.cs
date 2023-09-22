@@ -15,6 +15,7 @@ namespace DotNetExample.Tests.Steps
         public void whenTheGameIsStarted()
         {
             testObj = new GameController();
+            testObj.CreateCharacter("Susie");
             testObj.StartGame();
         }
 

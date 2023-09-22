@@ -53,8 +53,8 @@ namespace levelup
             // DONE: Implement startGame - Should probably create positions and put the character on one
             // DONE: Should also update the game status?
             if(character == null)
-                character = CreateCharacter("");
-                
+                character = new Character("");
+
             map = new GameMap();
             character.enterMap(map);
             status.currentPosition = character.getPosition().coordinates;
