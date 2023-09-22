@@ -78,11 +78,16 @@ namespace levelup
         public void SetCharacterPosition(Point coordinates)
         {
             //TODO: IMPLEMENT THIS TO SET CHARACTERS CURRENT POSITION -- exists to be testable
+            if(character == null)
+                character = new Character();
+                
+            character.position.coordinates = coordinates;
         }
 
         public void SetCurrentMoveCount(int moveCount)
         {
             //TODO: IMPLEMENT THIS TO SET CURRENT MOVE COUNT -- exists to be testable
+            status.moveCount = moveCount;
         }
 
         public int GetTotalPositions()

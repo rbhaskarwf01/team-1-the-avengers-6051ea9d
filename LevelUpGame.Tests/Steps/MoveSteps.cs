@@ -15,6 +15,10 @@ namespace DotNetExample.Tests.Steps
         GameController.DIRECTION direction;
         Point currentPosition;
 
+        public MoveSteps(){
+            testObj.CreateCharacter("Susie");
+        }
+
         [Given(@"the character starts at position with XCoordinates (.*)")]
         public void givenTheCharacterStartsAtX(int startX)
         {
