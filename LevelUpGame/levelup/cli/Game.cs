@@ -97,6 +97,16 @@ class Game
     {
         Console.WriteLine("-------------------------------------------------");
         Console.WriteLine("LEVEL UP GAMES");
+Console.WriteLine("                 _ _.-'`-._ _");
+Console.WriteLine("                ;.'___WF___'.;");
+Console.WriteLine("     _________n.[____________].n_________");
+Console.WriteLine("    |\"\"_\"\"_\"\"_\"\"||==||==||==||\"\"_\"\"_\"\"_\"\"]");
+Console.WriteLine("    |\"\"\"\"\"\"\"\"\"\"\"||..||..||..||\"\"\"\"\"\"\"\"\"\"\"|");
+Console.WriteLine("    |LI LI LI LI||LI||LI||LI||LI LI LI LI|");
+Console.WriteLine("    |.. .. .. ..||..||..||..||.. .. .. ..|");
+Console.WriteLine("    |LI LI LI LI||LI||LI||LI||LI LI LI LI|");
+Console.WriteLine(" ,,;;,;;;,;;;,;;;,;;;,;;;,;;;,;;,;;;,;;;,;;,,");
+Console.WriteLine(" ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;  ");
         Console.WriteLine("-------------------------------------------------");
         Console.WriteLine("Use your arrow keys to select a command below");
         Console.WriteLine("Create a character with a custom name.");

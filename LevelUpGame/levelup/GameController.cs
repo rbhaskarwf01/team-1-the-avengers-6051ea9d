@@ -4,7 +4,8 @@ namespace levelup
 {
     public class GameController
     {
-        public readonly string DEFAULT_CHARACTER_NAME = "Character";
+        public readonly string DEFAULT_CHARACTER_NAME = "Charlie";
+        Character character;
 
         public record struct GameStatus(
             // TODO: Add other status data
@@ -36,11 +37,13 @@ namespace levelup
         {
             if (name != null && !name.Equals(""))
             {
-                this.status.characterName = name;
+                character = new Character(name);   
+                this.status.characterName = character.Name;  
             }
             else
             {
-                this.status.characterName = DEFAULT_CHARACTER_NAME;
+                character = new Character(DEFAULT_CHARACTER_NAME);     
+                this.status.characterName = character.Name;
             }
         }
 
