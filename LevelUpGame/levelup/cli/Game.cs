@@ -133,22 +133,26 @@ Console.WriteLine(" ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;  ");
     {
         gameController.Move(GameController.DIRECTION.NORTH);
         updateStatus(gameController.GetStatus());
+        PrintLastStep();
     }
     static void MoveSouth()
     {
         gameController.Move(GameController.DIRECTION.SOUTH);
         updateStatus(gameController.GetStatus());
+        PrintLastStep();
     }
     static void MoveEast()
     {
         gameController.Move(GameController.DIRECTION.EAST);
         updateStatus(gameController.GetStatus());
+        PrintLastStep();
     }
 
     static void MoveWest()
     {
         gameController.Move(GameController.DIRECTION.WEST);
         updateStatus(gameController.GetStatus());
+        PrintLastStep();
     }
 
     static void EndGame()
@@ -161,6 +165,11 @@ Console.WriteLine(" ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;  ");
             PrintSummary();
             Environment.Exit(0);
         }
+    }
+
+    static void PrintLastStep(){
+        var lastStep = gameHistory.Last();
+        Console.WriteLine(lastStep);
     }
 
     static void PrintSummary()
