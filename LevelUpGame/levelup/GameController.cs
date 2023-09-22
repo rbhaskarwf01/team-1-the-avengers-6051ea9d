@@ -6,6 +6,7 @@ namespace levelup
     {
         public readonly string DEFAULT_CHARACTER_NAME = "Charlie";
         Character character;
+        GameMap map;
 
         public record struct GameStatus(
             // TODO: Add other status data
@@ -51,7 +52,7 @@ namespace levelup
         {
             // DONE: Implement startGame - Should probably create positions and put the character on one
             // DONE: Should also update the game status?
-            GameMap map = new GameMap();
+            map = new GameMap();
             character.enterMap(map);
             status.currentPosition = character.getPosition().coordinates;
             status.moveCount = 0;
@@ -84,7 +85,7 @@ namespace levelup
         public int GetTotalPositions()
         {
             //TODO: IMPLEMENT THIS TO GET THE TOTAL POSITIONS FROM THE MAP -- exists to be testable
-            return -10;
+            return map.getTotalPositions();
         }
 
 
